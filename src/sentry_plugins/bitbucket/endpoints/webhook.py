@@ -22,7 +22,7 @@ logger = logging.getLogger('sentry.webhooks')
 
 # Bitbucket Cloud IP range:
 # https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html#Managewebhooks-trigger_webhookTriggeringwebhooks
-BITBUCKET_IP_RANGE = ipaddress.ip_network(u'104.192.143.0/24')
+BITBUCKET_IP_RANGE = [ipaddress.ip_network(u'104.192.143.0/24'), ipaddress.ip_address('34.198.203.127'), ipaddress.ip_address('34.198.178.64'), ipaddress.ip_address('34.198.32.85')]
 
 
 class Webhook(object):
