@@ -152,7 +152,7 @@ class BitbucketWebhookEndpoint(View):
 
         if not ipaddress.ip_address(six.text_type(request.META['REMOTE_ADDR'])
                                     ) in BITBUCKET_IP_RANGE or ipaddress.ip_address(six.text_type(request.META['REMOTE_ADDR'])
-                                    ) in BITBUCKET_IPs:
+                                    ) in BITBUCKET_IPS:
             logger.error(
                 'bitbucket.webhook.invalid-ip-range', extra={
                     'organization_id': organization.id,
